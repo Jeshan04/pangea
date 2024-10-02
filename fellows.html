@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.png" type="pangea\assets\images\favicon.png">
+
+
+    <title>Pangea Society</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/fellows.css">
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <script>    createHeader();  </script>
+  <!-- ***** Header Area End ***** -->
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ 
+ 
+ <!-- Fellows Tab here  -->
+ <div class="container wow slideInUp" data-wow-duration="0.85s" data-wow-delay="0s">
+     <div class="section-heading">
+         <h4>Our <em>Fellows</em></h4>
+        </div>
+        <div class="row" id="team-container" ></div>
+  </div>
+  <script>
+    const teamMembers = [
+        {
+            img: "assets/images/johndoe.jpg",
+            name: "Williamson",
+            role: "Web Developer",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.",
+            social: {
+                twitter: "#",
+                linkedin: "#",
+                facebook: "#",
+                googlePlus: "#"
+            }
+        },
+        {
+            img: "assets/images/client-image.jpg",
+            name: "Kristiana",
+            role: "Web Designer",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.",
+            social: {
+                twitter: "#",
+                linkedin: "#",
+                facebook: "#",
+                googlePlus: "#"
+            }
+        },
+        {
+            img: "assets/images/johndoe.jpg",
+            name: "John Doe",
+            role: "Web Developer",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.",
+            social: {
+                twitter: "#",
+                linkedin: "#",
+                facebook: "#",
+                googlePlus: "#"
+            }
+        },
+        {
+            img: "assets/images/johndoe.jpg",
+            name: "Williamson",
+            role: "Web Developer",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.",
+            social: {
+                twitter: "#",
+                linkedin: "#",
+                facebook: "#",
+                googlePlus: "#"
+            }
+        },
+        {
+            img: "assets/images/johndoe.jpg",
+            name: "Williamson",
+            role: "Web Developer",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.",
+            social: {
+                twitter: "#",
+                linkedin: "#",
+                facebook: "#",
+                googlePlus: "#"
+            }
+        },
+        // Add more team members here...
+    ];
+
+    const teamContainer = document.getElementById('team-container');
+
+    teamMembers.forEach(member => {
+        const memberHTML = `
+            <div class="col-md-5th col-sm-6">
+                <div class="our-team">
+                    <img src="${member.img}" alt="${member.name}">
+                    <div class="over-layer">
+                        <div class="team-content">
+                            <h3 class="title">${member.name}</h3>
+                            <span class="post">${member.role}</span>
+                            <p class="description">${member.description}</p>
+                        </div>
+                    </div>
+                    <ul class="social-links">
+                        <li><a href="${member.social.twitter}" class="fab fa-twitter"></a></li>
+                        <li><a href="${member.social.linkedin}" class="fab fa-linkedin"></a></li>
+                        <li><a href="${member.social.facebook}" class="fab fa-facebook"></a></li>
+                        <li><a href="${member.social.googlePlus}" class="fab fa-google-plus"></a></li>
+                    </ul>
+                </div>
+                <br>
+            </div>
+        `;
+        teamContainer.innerHTML += memberHTML;
+    });
+    // Remove the teams of 5 and individually add 10 more members as per use case
+    const team_of_5 = teamContainer.innerHTML;
+    teamContainer.innerHTML += team_of_5;
+    teamContainer.innerHTML += team_of_5;
+
+</script> 
+
+<!-- footer -->
+<script>    createFooter();  </script>
+  
+  <!-- Scripts -->
+  <script src="assets/js/header_footer.js" defer></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
+
