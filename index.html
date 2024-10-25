@@ -41,7 +41,42 @@
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
-  <script>    createHeader();  </script>
+  <!-- <script>    createHeader();  </script> -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo.png" style="height: 75px;" alt="Pangea">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="./index.html" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="./about.html">About Us</a></li>
+              <li class="scroll-to-section"><a href="./fellows.html">Fellows</a></li>
+              <li class="scroll-to-section"><a href="./news.html">News and Blogs</a></li>
+              <li class="scroll-to-section"><a href="./partnership.html">Partnership & Vision</a></li>
+              <!-- <li class="scroll-to-section"><a href="./contact.html">Contact</a></li> -->
+              <li></li>
+              
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="heading-scroll">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </div>
+  </header>
   <!-- ***** Header Area End ***** -->
 
 </div>
@@ -55,23 +90,17 @@
               <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h2>Welcome to Pangea Society</h2>
+                    <h2>welcome to pangea society</h2>
                     <p>Pangea Society is an initiative which facilitates collaboration by bringing together experts from diverse fields to work on cutting-edge research projects and initiatives. We provide a platform for fellows to share ideas, access resources, and engage in interdisciplinary discussions. By connecting academia, industry, and policy makers, we ensure that innovative solutions are developed and implemented effectively, driving real-world impact. Additionally, we support these efforts with strategic partnerships, funding opportunities, and a strong community network, enabling our members to turn their visionary ideas into tangible outcomes.… </p>
                   </div>                 
-                  <!-- <div class="col-lg-12">
-                    <div class="white-button first-button scroll-to-section">
-                      <a href="#contact">Free Quote <i class="fab fa-apple"></i></a>
-                    </div>
-                    <div class="white-button scroll-to-section">
-                      <a href="#contact">Free Quote <i class="fab fa-google-play"></i></a>
-                    </div>
-                  </div> -->
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/slider-dec.png" alt="">
+
+                <img src="assets/images/earth.png" alt="">
+
               </div>
             </div>
           </div>
@@ -108,33 +137,81 @@
           </div>
           <div class="row">
             <div class="col-lg-12">
-              <p>We connect industries with brilliant researchers to solve cutting-edge problems, fostering impactful solutions that benefit society and inspire the next generation of thinkers.</p>
+              <p>We connect industries with brilliant researchers to solve cutting-edge problems, fostering impactful solutions that benefit society and inspire the next generation of thinkers.
+                <a href="./about.html">Read More..</a>
+              </p>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="right-image">
-            <img src="assets/images/about-right-dec.png" alt="">
+            <div class="fadecycle">
+              <div></div>
+                <div></div>
+                <div></div>
+              </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <br>
-  <div class="container wow slideInUp" data-wow-duration="0.85s" data-wow-delay="0s">
-    <div class="section-heading">
-      <center><h4>Our <em>Fellows</em></h4></center>
-      <br>
-    </div>
-    <div class="row" id="team-container"></div>
-  </div>
+
 
   
 <!-- footer -->
-<script>    createFooter();  </script>
+<footer id="newsletter">
+  <div class="container">
+    <div class="row head1">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="section-heading">
+          <h4>Pangea Society</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row row1">
+      <div class="col-lg-4">
+        <div class="footer-widget">
+          <h4>Contact Us</h4>
+          <p>ONE WORLD CENTER, BUILDING-2A, 7th floor, Senapati Bapat Marg, Lower Parel, Mumbai, 400013</p>
+          <p><a href="#">Phone Number: +91 9266877409</a></p>
+          <p><a href="#">Email: connect@pangeasociety.org</a></p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-widget">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./partnership.html">Partnership</a></li>
+            <li><a href="./news.html">News</a></li>
+            <li><a href="./fellow.html">Fellows</a></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-widget">
+          <h4>About Our Company</h4>
+          <div class="logo">
+            <img src="assets/images/logo.png" alt="">
+          </div>
+          <p>We envision a world where research and academia are not isolated in theoretical frameworks but are actively engaged in solving contemporary issues.</p>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="copyright-text">
+          <p>Copyright © 2024 Pangea. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
   <!-- Scripts -->
-  <script src="assets/js/fellows.js"></script>
-  <script src="assets/js/header_footer.js" defer></script>
+
+    <script src="assets/js/header_footer.js" defer></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
@@ -142,5 +219,8 @@
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/scrollbar.js"></script>
+  
+
 </body>
 </html>

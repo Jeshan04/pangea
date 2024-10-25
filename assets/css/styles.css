@@ -259,7 +259,7 @@ body {
 
 /* 
 ---------------------------------------------
-header
+`
 --------------------------------------------- 
 */
 
@@ -280,7 +280,10 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
+
   color: #f3aa20;
+
+
 }
 
 .background-header .nav li a.active {
@@ -292,16 +295,16 @@ header
   position: absolute;
   width: 100%;
   height: 1px;
+
   background-color: #f3aa20;
+
+
   content: '';
   left: 50%;
   bottom: -20px;
   transform: translateX(-50%);
 }
 
-.background-header .nav li:last-child a.active:after {
-  background-color: transparent;
-}
 
 .header-area {
   background-color: transparent;
@@ -365,25 +368,7 @@ header
   padding-right: 20px;
 }
 
-.header-area .main-nav .nav li:nth-child(6) {
-  padding-right: 0px;
-  padding-left: 40px;
-}
 
-.header-area .main-nav .nav li:last-child a ,
-.background-header .main-nav .nav li:last-child a,
-.header-area .main-nav .nav li:nth-child(6) a ,
-.background-header .main-nav .nav li:nth-child(6) a {
-  padding: 0px 20px !important;
-  font-weight: 400;
-}
-
-.header-area .main-nav .nav li:last-child a:hover ,
-.background-header .main-nav .nav li:last-child a:hover,
-.header-area .main-nav .nav li:nth-child(6) a:hover ,
-.background-header .main-nav .nav li:nth-child(6) a:hover {
-  color: #fff !important;
-}
 
 .header-area .main-nav .nav li a {
   display: block;
@@ -403,12 +388,11 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
+
   color: #f3aa20!important;
+
 }
 
-.header-area .main-nav .nav li:last-child a.active {
-  color: #fff !important;
-}
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
@@ -628,24 +612,17 @@ header
 }
 
 @media (max-width: 992px) {
-  .header-area .main-nav .nav li:last-child  ,
-  .background-header .main-nav .nav li:last-child {
+  .header-area .main-nav   ,
+  .background-header .main-nav  {
     color: #069;
   }
-  .header-area .main-nav .nav li:nth-child(6),
-  .background-header .main-nav .nav li:nth-child(6) {
-    padding-right: 0px;
-  }
+
   .background-header .nav li a.active:after {
     display: none;
   }
 }
 
 @media (max-width: 767px) {
-  .pre-header ul.info li:last-child,
-  .pre-header ul.info li:nth-child(6) {
-    display: none!important;
-  }
   .background-header .main-nav .nav {
     margin-top: 80px !important;
   }
@@ -869,7 +846,7 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 250px 120px 150px 120px;
+  padding: 250px 20px 50px 120px;
   position: relative;
   overflow: hidden;
 }
@@ -896,7 +873,7 @@ Banner Style
   position: relative;
   font-weight: 700;
   line-height: 70px;
-  font-size: 50px;
+  font-size: 75px;
   margin-bottom: 20px;
 }
 
@@ -904,6 +881,7 @@ Banner Style
   margin-bottom: 45px;
   color: #2a2a2a;
   font-weight: 400;
+  font-size: 25px;
 }
 
 .main-banner .left-content .first-button {
@@ -921,7 +899,7 @@ Banner Style
 }
 
 .main-banner .right-image img {
-  max-width: 710px;
+  max-width: 1000px;
 }
 
 .main-banner .left-content .white-button a {
@@ -1084,13 +1062,13 @@ card Style
   gap: 2px;
   padding: .2em;
   z-index: 1;
+  overflow: visible; /* Allow overflow when expanded */
 }
-
 
 .card p {
   height: 100%;
   flex: 1;
-  overflow: hidden;
+  overflow: hidden; /* Maintain clipping inside individual cards */
   cursor: pointer;
   border-radius: 2px;
   transition: all .5s;
@@ -1103,7 +1081,8 @@ card Style
 
 .card p:hover {
   flex: 4;
-  transform: scaleY(1.15);
+  transform: scaleY(1.30);
+  overflow: visible; /* Ensure no clipping on expansion */
 }
 
 .card p span {
@@ -1120,6 +1099,36 @@ card Style
 .card p:hover span {
   transform: rotate(0);
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    position: relative;
+    flex-direction: column; /* Stack items vertically */
+    width: 85%; /* Adjust the width for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    margin-top: 150%;
+    /* padding-top: auto; */
+  }
+  
+  .card p {
+    height: auto; /* Adjust height for individual boxes */
+    flex: none; /* Disable flex-grow for smaller screens */
+    width: 100%; /* Make each box full-width */
+    transform: none; /* Disable scale transform for smaller screens */
+  }
+  
+  .card p:hover {
+    flex: none;
+    transform: none; /* Disable hover expansion on small screens */
+  }
+  
+  .card p span {
+    transform: none; /* Rotate text back to normal */
+  }
+}
+
+
 
 
 /*
@@ -1190,6 +1199,9 @@ About Us
 .about-us {
   padding-top: 130px;
   position: relative;
+  display: flex;
+  justify-content: space-between; /* Pushes content to left and right sides */
+  align-items: center; 
 }
 
 .about-us .section-heading {
@@ -1214,7 +1226,7 @@ About Us
 }
 
 .about-us .box-item h4 a {
-  font-size: 20px;
+  font-size: 50px;
   font-weight: 700;
   margin-top: 8px;
   color: #2a2a2a;
@@ -1240,8 +1252,13 @@ About Us
 }
 
 .about-us .right-image {
-  position: relative;
+  max-width: 500px; 
+  width: 100%; 
+  height: auto;
+  position: relative; 
+  margin-left: auto; 
   z-index: 1;
+  margin-top: -100px;
 }
 
 .about-us:after {
@@ -1257,6 +1274,16 @@ About Us
   z-index: 0;
 }
 
+@media (max-width: 768px) {
+  .about-us {
+    padding-top: 0px;
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .right-image {
+    display: none; /* Hide the image on smaller screens */
+  }
+}
 
 
 /* 
@@ -1427,9 +1454,7 @@ footer #search button:hover {
   margin-bottom: 10px;
 }
 
-.footer-widget ul li:last-child {
-  margin-bottom: 0px;
-}
+
 
 .footer-widget ul li a {
   font-size: 15px;
@@ -1723,9 +1748,7 @@ responsive
     max-width: 25px;
     margin-left: 0px;
   }
-  .header-area .main-nav .nav li:last-child {
-    padding-left: 20px;
-  }
+
   
   .main-banner .left-content h2 {
     z-index: 2;
@@ -1854,9 +1877,7 @@ responsive
   }
   footer .section-heading h4 {
     color: #2a2a2a;
-  }
-  footer #search {
-    margin-bottom: 45px;
+    margin-top: 400px !important;
   }
   footer {
     padding-top: 0px;
@@ -2068,3 +2089,69 @@ responsive
 @media only screen and (max-width: 990px){
   .our-team{ margin-bottom: 20px; }
 }
+
+
+@media (max-width: 600px) {
+  #newsletter .row1 {
+    padding-top: 200px;
+  }
+}
+
+
+.heading-scroll {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #fff;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #4B345E;
+  width: 0%;
+}
+
+.fadecycle > * {
+  opacity: 0;
+  position: absolute;
+  width: 600px;
+  height: 385px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Set each image as background for each div */
+.fadecycle > *:nth-child(1) { 
+  background-image: url("../images/about1.JPG"); 
+}
+.fadecycle > *:nth-child(2) { 
+  background-image: url("../images/about2.JPG"); 
+}
+.fadecycle > *:nth-child(3) { 
+  background-image: url("../images/about3.jpeg"); 
+}
+
+/* Animation settings */
+@keyframes fadeinout {
+  0% { opacity: 0; }
+  20%, 40% { opacity: 1; }
+  60%, 100% { opacity: 0; }
+}
+
+.fadecycle > * {
+  animation: fadeinout 6s linear infinite;
+}
+
+/* Delay animation for each element */
+.fadecycle > *:nth-child(1) { animation-delay: 0s; }
+.fadecycle > *:nth-child(2) { animation-delay: 4s; }
+.fadecycle > *:nth-child(3) { animation-delay: 8s; }
