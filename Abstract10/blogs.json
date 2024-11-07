@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Minimalism Never Goes Out of Style",
+        "author": "Naruto Uzumaki",
+        "date": "September 06, 2016",
+        "image": "images/thumbs/featured/featured-1.jpg",
+        "excerpt": "An exploration of minimalistic design principles...",
+        "content": "Full content of the blog goes here."
+    },
+    {
+        "id": 2,
+        "title": "Enhancing Your Designs with Negative Space",
+        "author": "Sasuke Uchiha",
+        "date": "August 29, 2016",
+        "image": "images/thumbs/featured/featured-2.jpg",
+        "excerpt": "Learn how negative space can enhance your design.",
+        "content": "Full content of the blog goes here."
+    }
+]

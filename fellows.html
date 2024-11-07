@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head >
+  <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,10 +26,48 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/fellows.css">
+
+
+    <!-- About CSS -->
+    <!-- <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">  
+    <link rel="stylesheet" href="css/main.css"> -->
 
   </head>
+  <style>
+    #iframe {
+        height: 1400px;
+}
 
+@media only screen and (max-width: 767px) {
+#iframe {
+  height: 1600px; 
+}
+}
+
+.custom-button {
+  background-color: #4b345e;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #3a2751;
+  color: #ffffff;
+}
+.header-area {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: white;
+    }
+  </style>
 <body>
 
   <!-- ***** Preloader Start ***** -->
@@ -59,7 +97,7 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li class="scroll-to-section"><a href="./index.html">Home</a></li>
-              <li class="scroll-to-section"><a href="./about.html">About Us</a></li>
+              <li class="scroll-to-section"><a href="./about.html" >About Us</a></li>
               <li class="scroll-to-section"><a href="./fellows.html" class="active">Fellows</a></li>
               <li class="scroll-to-section"><a href="./news.html">News and Blogs</a></li>
               <li class="scroll-to-section"><a href="./partnership.html">Partnership & Vision</a></li>
@@ -82,121 +120,68 @@
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
- <br>
- <br>
- <br>
- <br>
- <br>
- 
- 
- <!-- Fellows Tab here  -->
- <div class="container wow slideInUp" data-wow-duration="0.85s" data-wow-delay="0s">
-     <div class="section-heading">
-         <h4>Our <em>Fellows</em></h4>
-        </div>
-        <div class="row" id="team-container" ></div>
-  </div>
-  <script>
-    const teamMembers = [
-        {
-            img: "assets/images/johndoe.jpg",
-            name: "Williamson",
-            role: "Web Developer",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.",
-            social: {
-                twitter: "#",
-                linkedin: "#",
-                facebook: "#",
-                googlePlus: "#"
-            }
-        },
-        {
-            img: "assets/images/client-image.jpg",
-            name: "Kristiana",
-            role: "Web Designer",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.",
-            social: {
-                twitter: "#",
-                linkedin: "#",
-                facebook: "#",
-                googlePlus: "#"
-            }
-        },
-        {
-            img: "assets/images/johndoe.jpg",
-            name: "John Doe",
-            role: "Web Developer",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.",
-            social: {
-                twitter: "#",
-                linkedin: "#",
-                facebook: "#",
-                googlePlus: "#"
-            }
-        },
-        {
-            img: "assets/images/johndoe.jpg",
-            name: "Williamson",
-            role: "Web Developer",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.",
-            social: {
-                twitter: "#",
-                linkedin: "#",
-                facebook: "#",
-                googlePlus: "#"
-            }
-        },
-        {
-            img: "assets/images/johndoe.jpg",
-            name: "Williamson",
-            role: "Web Developer",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.",
-            social: {
-                twitter: "#",
-                linkedin: "#",
-                facebook: "#",
-                googlePlus: "#"
-            }
-        },
-        // Add more team members here...
-    ];
-
-    const teamContainer = document.getElementById('team-container');
-
-    teamMembers.forEach(member => {
-        const memberHTML = `
-            <div class="col-md-5th col-sm-6">
-                <div class="our-team">
-                    <img src="${member.img}" alt="${member.name}">
-                    <div class="over-layer">
-                        <div class="team-content">
-                            <h3 class="title">${member.name}</h3>
-                            <span class="post">${member.role}</span>
-                            <p class="description">${member.description}</p>
-                        </div>
-                    </div>
-                    <ul class="social-links">
-                        <li><a href="${member.social.twitter}" class="fab fa-twitter"></a></li>
-                        <li><a href="${member.social.linkedin}" class="fab fa-linkedin"></a></li>
-                        <li><a href="${member.social.facebook}" class="fab fa-facebook"></a></li>
-                        <li><a href="${member.social.googlePlus}" class="fab fa-google-plus"></a></li>
-                    </ul>
-                </div>
-                <br>
-            </div>
-        `;
-        teamContainer.innerHTML += memberHTML;
-    });
-    // Remove the teams of 5 and individually add 10 more members as per use case
-    const team_of_5 = teamContainer.innerHTML;
-    teamContainer.innerHTML += team_of_5;
-    teamContainer.innerHTML += team_of_5;
-
-</script> 
-
-<!-- footer -->
-<script>    createFooter();  </script>
   
+
+<br>
+<br>
+<br>
+<br>
+<!-- About -->
+
+<iframe id="iframe" src="Abstract10/fellows.html" class="no-scroll" frameborder="0" scrolling="no" style=" width: 100%;"></iframe>
+<div style="text-align: center; margin-top: -100px; ">
+	<a href="./joinus.html" class="custom-button">Join Us Now</a>
+  </div>
+ <!-- footer -->
+ <footer id="newsletter">
+  <div class="container">
+    <div class="row head1">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="section-heading">
+          <h4>Pangea Society</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row row1">
+      <div class="col-lg-4">
+        <div class="footer-widget">
+          <h4>Contact Us</h4>
+          <p>One World Center, Building-2A, 7th floor, Senapati Bapat Marg, Lower Parel, Mumbai, 400013</p>
+          <p><a href="#">Phone Number: +91 9266877409</a></p>
+          <p><a href="#">Email: connect@pangeasociety.org</a></p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-widget">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./partnership.html">Partnership</a></li>
+            <li><a href="./news.html">News</a></li>
+            <li><a href="./fellows.html">Fellows</a></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-widget">
+          <h4>About Our Company</h4>
+          <div class="logo">
+            <img src="assets/images/logo.png" alt="">
+          </div>
+          <p>We envision a world where research and academia are not isolated in theoretical frameworks but are actively engaged in solving contemporary issues.</p>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="copyright-text">
+          <p>Copyright © 2024 Pangea. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
   <!-- Scripts -->
     <script src="assets/js/header_footer.js" defer></script>
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -208,7 +193,10 @@
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/scrollbar.js"></script>
 
+  <!-- About js -->
+  <!-- <script src="assets/js/jquery-2.1.3.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script> -->
 
 </body>
 </html>
-

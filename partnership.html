@@ -27,7 +27,25 @@
     <link rel="stylesheet" href="assets/css/owl.css">
 
   </head>
+<style>
+  .header-area {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: white;
+    }
+    /* Center align on mobile */
+@media (max-width: 768px) {
+  .partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 
+</style>
 <body>
 
   <!-- ***** Preloader Start ***** -->
@@ -80,12 +98,6 @@
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
-  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
 
   <div id="about" class="about-us section ">
@@ -103,8 +115,8 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="right-image wow wow fadeIn">
-            <!-- <img src="assets/images/about-right-dec.png" alt=""> -->
+          <div class="wow wow fadeIn">
+            <img src="assets/images/visionaryy.jpg" alt="">
           </div>
         </div>
       </div>
@@ -112,16 +124,18 @@
   </div>
 
   <br><br><br><br>
-  <div class="container wow slideInUp">
-  <div class="section-heading">
+  <div class="container wow slideInUp partner">
+  <div class="section-heading align-self-center">
     <h4> <em>Partner</em> with us</h4>
   </div>
+
 
   
 
   <div class="dropdown-box">
     <div class="dropdown-heading">For Academicians</div>
     <div class="dropdown-content">
+      <br>
       <p>At Pangea Society, we believe in the power of academic collaboration to drive meaningful change. By partnering with academicians, we aim to bridge the gap between theoretical research and practical applications. Our platform provides opportunities for scholars to engage in interdisciplinary discussions and collaborate on cutting-edge research projects that address real-world challenges. We offer grants, structured projects, and a network of industry professionals and policymakers to ensure that academic research contributes to societal progress. Through conferences, webinars, and workshops, academicians can share insights, exchange ideas, and contribute to innovation-driven solutions. Together, we work to elevate the academic landscape, fostering a culture where research is not only recognized but also actively implemented in shaping policy, industry solutions, and educational reform. By partnering with us, academicians gain access to resources and networks that enable them to maximize their impact on society.</p>
     </div>
   </div>
@@ -129,6 +143,7 @@
   <div class="dropdown-box">
     <div class="dropdown-heading">For Industries</div>
     <div class="dropdown-content">
+      <br>
       <p>
         Pangea Society connects industries with the brightest academic minds to solve complex problems through innovation and research. By partnering with us, industries gain access to a pool of talented researchers capable of developing practical, evidence-based solutions to pressing challenges. Our fellows, selected for their expertise and creativity, work closely with industry leaders to tackle projects that drive growth, sustainability, and competitiveness. This partnership provides companies with cutting-edge knowledge and second opinions on long-term, research-backed solutions that offer tangible results. Through our fellowship program, industries can also contribute to educational outreach and foster the next generation of problem-solvers. By collaborating with Pangea Society, industries not only solve current challenges but also align themselves with ethical practices and a long-term vision for innovation, sustainable impact, and corporate social responsibility. We offer industries the opportunity to drive meaningful change while strengthening ties with academia.</p>
     </div>
@@ -137,6 +152,7 @@
   <div class="dropdown-box">
     <div class="dropdown-heading">For Policy Makers</div>
     <div class="dropdown-content">
+      <br>
       <p>Pangea Society provides policymakers with access to expert researchers who offer evidence-based solutions to complex societal issues. Our fellows bring interdisciplinary perspectives and cutting-edge research to the policy-making process, ensuring that policies are informed, sustainable, and impactful. By partnering with us, policymakers can address multifaceted challenges in areas such as education, healthcare, and climate change through holistic and innovative approaches. Our network of experts also facilitates inclusive policymaking by fostering collaboration and dialogue among diverse stakeholders. Through structured workshops, training sessions, and knowledge-sharing initiatives, we help build the capacity of government institutions to craft forward-thinking, effective policies. Our commitment to transparency, accountability, and community engagement ensures that public trust is enhanced through clear communication and inclusive practices. Partnering with Pangea Society empowers policymakers to create lasting change that aligns with the Sustainable Development Goals (SDGs), driving societal progress in meaningful ways.</p>
     </div>
   </div>
@@ -157,7 +173,7 @@
       <div class="col-lg-4">
         <div class="footer-widget">
           <h4>Contact Us</h4>
-          <p>ONE WORLD CENTER, BUILDING-2A, 7th floor, Senapati Bapat Marg, Lower Parel, Mumbai, 400013</p>
+          <p>One World Center, Building-2A, 7th floor, Senapati Bapat Marg, Lower Parel, Mumbai, 400013</p>
           <p><a href="#">Phone Number: +91 9266877409</a></p>
           <p><a href="#">Email: connect@pangeasociety.org</a></p>
         </div>
@@ -170,7 +186,7 @@
             <li><a href="./about.html">About</a></li>
             <li><a href="./partnership.html">Partnership</a></li>
             <li><a href="./news.html">News</a></li>
-            <li><a href="./fellow.html">Fellows</a></li>
+            <li><a href="./joinus.html">Fellows</a></li>
             <li></li>
           </ul>
         </div>
@@ -192,6 +208,14 @@
     </div>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.dropdown-heading').forEach(function(heading) {
+  heading.addEventListener('click', function () {
+    this.parentElement.classList.toggle('active');
+  });
+});
+
+</script>
   <!-- Scripts -->
     <script src="assets/js/header_footer.js" defer></script>
   <script src="vendor/jquery/jquery.min.js"></script>
